@@ -1,14 +1,14 @@
 pipeline {
      agent any
      stages {
-          stage("Compile") {
+          stage('Compile') {
                steps {
-                    sh "mvn -B -DskipTests clean package"
+                    sh 'mvn -B -DskipTests clean package'
                }
           }
-          stage("Unit test") {
+          stage('Unit test') {
                steps {
-                    sh "mvn test"
+                    sh 'mvn test'
                }
                 post {
                         always {
