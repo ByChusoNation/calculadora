@@ -12,7 +12,7 @@ class CalificacionTest {
         Calificacion calif2 = new Calificacion(5,"DIS");
         boolean coinciden = calif1.MismaAsig(calif2);
         //assertTrue(calif1.MismaAsig(calif2));
-        assertEquals(true, calif1.MismaAsig(calif2));
+        assertEquals(false, calif1.MismaAsig(calif2));
     }
 
     @Test
