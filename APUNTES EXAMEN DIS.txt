@@ -1,0 +1,21 @@
+---------------------------------------DIS----------------------------------------- 
+
+
+En el mainView los nombre siempre tienen que ser los mismos que los de de customer. 
+e.getValue nos devuelve un objeto customer en el mainView
+
+add.clickListener: va a esperar a que de click (podemos elegir que funcion)
+
+Customer editor sive para editar lo de dentro de la tabla, solo los elementos. 
+
+vaadin.compatibilityMode=true
+( en applicacion.properties)
+
+ y después ejecutar:
+
+docker build -t webserver .
+winpty docker run -it -p 9000:8080 webserver
+FROM openjdk:15-jdk-alpine
+COPY "./target/demo-0.0.1-SNAPSHOT.jar" "app.jar"
+EXPOSE 9000
+ENTRYPOINT ["java", "-jar", "app.jar"]
